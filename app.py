@@ -56,7 +56,7 @@ def create_item(name):
             }
             store['items'].append(item)
             return item
-        return jsonify({'message': 'store not found'})
+    return jsonify({'message': 'store not found'})
 
 
 # GET /store/<name>/item
@@ -65,7 +65,7 @@ def get_item(name):
     for store in stores:
         if store['name'] == name:
             return jsonify(store['items'])
-        return jsonify({'message': 'store not found'})
+    return jsonify({'message': 'store not found'})
 
 
 if __name__ == '__main__':
